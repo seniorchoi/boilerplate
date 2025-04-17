@@ -1,0 +1,33 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# SQLite database (if used)
+instance/
+*.sqlite
+*.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.pid
+*.seed
+*.gz
+
+# Flask-Migrate migrations (optional, regenerate on deploy)
+migrations/

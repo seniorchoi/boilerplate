@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="tool-card card">
+        <h1 class="title">AI Email Drafter</h1>
+        <p class="subtitle">Type your goal, get a polished email instantly. Credits left: {{ credits }}</p>
+        <form method="POST" action="{{ url_for('ai.ai_tool') }}" id="ai-tool-form">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                <label for="prompt" class="form-label">Email Goal</label>
+                {{ form.prompt(class="form-control", placeholder="E.g., Follow-up with client about project status", rows="3", required=True) }}
+            </div>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+        <div class="example-prompts">
+            <p class="prompt-text">Try these: 
+                <span class="prompt-link" onclick="fillPrompt('Follow-up with client')">Follow-up</span>, 
+                <span class="prompt-link" onclick="fillPrompt('Thank customer')">Thank You</span>, 
+                <span class="prompt-link" onclick="fillPrompt('Request a meeting')">Meeting Request</span>
+            </p>
+        </div>
+        {% if result %}
+            <div class="result-box mt-4">
+                <h2 class="card-title">Your Email Draft</h2>
+                <p class="card-text">{{ result }}</p>
+                <button class="btn btn-outline" onclick="copyToClipboard('{{ result | replace('\n', '\\n') }}')">Copy to Clipboard</button>
+                <p class="credits-text">Credits remaining: {{ credits }}</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

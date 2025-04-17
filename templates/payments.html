@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="payment-section">
+    <h1 class="title">Unlock AI Email Drafter</h1>
+    <p class="subtitle">One-time payment for unlimited emails.</p>
+    <div class="card payment-card">
+        <h2 class="card-title">What’s Included</h2>
+        <ul class="benefits-list">
+            <li class="benefit-item">Instant email drafts for any purpose.</li>
+            <li class="benefit-item">Professional tone, every time.</li>
+            <li class="benefit-item">Unlimited drafts, no limits.</li>
+            <li class="benefit-item">Trusted by 100+ professionals.</li>
+        </ul>
+        <p class="card-text price-tag"><strong>Price:</strong> $10 (one-time)</p>
+        <form method="POST" action="{{ url_for('payments.buy') }}">
+            <button type="submit" class="btn btn-primary btn-large">Pay $10 Now</button>
+        </form>
+        <p class="trust-text">Secure payment via Stripe. No subscriptions.</p>
+        <a href="{{ url_for('ai.dashboard') }}" class="link">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}

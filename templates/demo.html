@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-section">
+    <h1 class="title">BlitzShip: Build Your AI SaaS in Minutes</h1>
+    <p class="subtitle">Launch a sleek, one-page AI app with no coding hassle. Sign up, unlock AI, and go live!</p>
+    <a href="{{ url_for('auth.signup') }}" class="btn btn-primary">Start for Free</a>
+</div>
+
+<div class="features-section">
+    <h2 class="title">What Can You Build?</h2>
+    <p class="subtitle">Turn BlitzShip into a high-value AI tool. Here’s what’s possible:</p>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3 class="feature-title">AI Tagline Generator</h3>
+            <p class="feature-text">Input a keyword, get catchy taglines for your brand.</p>
+            <p class="demo-example"><strong>Try it:</strong> “Coffee” → “Brewed for You!”</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">AI Email Drafter</h3>
+            <p class="feature-text">Enter a goal, get a polished email ready to send.</p>
+            <p class="demo-example"><strong>Try it:</strong> “Follow-up” → “Hi, just checking in...”</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">AI Idea Spark</h3>
+            <p class="feature-text">Stuck? Get creative ideas for any project.</p>
+            <p class="demo-example"><strong>Try it:</strong> “Blog” → “10 Tips for Growth”</p>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2 class="card-title">How It Works</h2>
+    <p class="card-text">1. Sign up free. 2. Unlock AI for $10 (one-time). 3. Build your app.</p>
+    <a href="{{ url_for('auth.signup') }}" class="btn btn-primary">Get Started</a>
+</div>
+{% endblock %}

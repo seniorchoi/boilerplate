@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="payment-section">
+        <h1 class="title">Get More Credits</h1>
+        <p class="subtitle">Buy credits to keep drafting emails instantly.</p>
+        
+        <div class="card payment-card">
+            <h2 class="card-title">50 Credits for $10</h2>
+            <ul class="benefits-list">
+                <li class="benefit-item">Draft 50 professional emails.</li>
+                <li class="benefit-item">Instant, polished results.</li>
+                <li class="benefit-item">No subscriptions, pay as you go.</li>
+                <li class="benefit-item">Trusted by 100+ professionals.</li>
+            </ul>
+            <p class="card-text price-tag"><strong>Price:</strong> $10 for 50 credits</p>
+            <form method="POST" action="{{ url_for('payments.buy') }}">
+                <button type="submit" class="btn btn-primary btn-large">Buy 50 Credits</button>
+            </form>
+            <p class="trust-text">Secure payment via Stripe. One credit = one email draft.</p>
+            <a href="{{ url_for('ai.dashboard') }}" class="link">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

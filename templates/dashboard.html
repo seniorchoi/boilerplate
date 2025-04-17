@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="dashboard-section">
+        <h1 class="title">Welcome</h1>
+        <p class="subtitle">Your hub for effortless email drafting</p>
+        
+        <div class="card status-card">
+            <h2 class="card-title">Credits: {{ user.credits }}</h2>
+            <p class="card-text">You have {{ user.credits }} email drafts left. {% if user.credits < 3 %}Buy more to keep drafting!{% endif %}</p>
+            <a href="{{ url_for('ai.ai_tool') }}" class="btn btn-primary">Draft an Email</a>
+            {% if user.credits < 3 %}
+                <a href="{{ url_for('payments.buy') }}" class="btn btn-outline mt-2">Get More Credits</a>
+            {% endif %}
+        </div>
+
+
+        <div class="features-section">
+            <h2 class="title">Draft Any Email</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📩</span>
+                    <h3 class="feature-title">Follow-Ups</h3>
+                    <p class="feature-text">Keep conversations moving.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🙏</span>
+                    <h3 class="feature-title">Thank Yous</h3>
+                    <p class="feature-text">Show gratitude with ease.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📅</span>
+                    <h3 class="feature-title">Requests</h3>
+                    <p class="feature-text">Ask for meetings or feedback.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2 class="title">See It in Action</h2>
+            <div class="email-preview">
+                <p class="preview-header"><strong>Goal:</strong> Thank customer for their loyalty</p>
+                <p class="preview-body">Hi John,<br><br>Thank you for your recent purchase! We’re thrilled to have you on board.I wanted to take a moment to express our heartfelt gratitude for your continued loyalty to [Your Company Name]. Your support means a great deal to us, and we truly appreciate the trust you place in our services. As a token of our appreciation, we are excited to offer you [mention any special offer or discount, if applicable]. We are committed to providing you with the best possible experience and look forward to serving you in the future.<br><br>Best,<br>Your Team</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

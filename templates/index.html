@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="title">AI Email Drafter: Emails in Seconds</h1>
+            <p class="subtitle">Craft polished emails instantly. Get 5 free credits to start drafting now!</p>
+            <div class="hero-cta">
+                <a href="{{ url_for('auth.signup') }}" class="btn btn-primary">Start Drafting</a>
+                <a href="{{ url_for('auth.login') }}" class="btn btn-outline">Log In</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="email-mockup">
+                <p class="mockup-text"><strong>Goal:</strong> Follow-up with client</p>
+                <p class="mockup-text">Dear Jane,<br>Just checking in on our last chat. Any updates? Let me know!<br>Best,<br>Alex</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="features-section">
+        <h2 class="title">Why Choose AI Email Drafter?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Instant Drafts</h3>
+                <p class="feature-text">Type a goal, get an email in seconds.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">✍️</span>
+                <h3 class="feature-title">Professional Tone</h3>
+                <p class="feature-text">Polished emails every time.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎟️</span>
+                <h3 class="feature-title">Free Credits</h3>
+                <p class="feature-text">Start with 5 free drafts, buy more anytime.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card status-card">
+        <h2 class="card-title">Ready to Save Time?</h2>
+        <p class="card-text">Join 100+ professionals drafting emails effortlessly.</p>
+        <a href="{{ url_for('auth.signup') }}" class="btn btn-primary">Get Your 5 Free Credits</a>
+    </div>
+</div>
+{% endblock %}
