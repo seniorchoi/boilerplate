@@ -30,4 +30,3 @@ instance/
 *.gz
 
 # Flask-Migrate migrations (optional, regenerate on deploy)
-migrations/
