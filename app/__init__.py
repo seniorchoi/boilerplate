@@ -11,6 +11,8 @@ from .main.routes import main_bp
 from .auth.routes import auth_bp
 from .ai.routes import ai_bp
 from .payments.routes import payments_bp
+from .license import require_license
+require_license()
 
 def create_app():
     app = Flask(
@@ -25,11 +27,6 @@ def create_app():
         app.config.from_object('config.ProdConfig')
     else:
         app.config.from_object('config.DevConfig')
-
-    # License‑key check
-    provided = os.getenv('LICENSE_KEY', '')
-    if provided not in app.config['LICENSE_KEYS']:
-        raise RuntimeError("❌ Invalid or missing LICENSE_KEY—access denied.")
 
     # Init extensions
     db.init_app(app)

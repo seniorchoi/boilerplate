@@ -5,8 +5,6 @@ import os
 class BaseConfig:
     SECRET_KEY = os.getenv('FLASK_SECRET_KEY', 'change‑me')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    # Keys for gating access
-    LICENSE_KEYS       = os.getenv('LICENSE_KEYS', '').split(',')
     STRIPE_SECRET_KEY  = os.getenv('STRIPE_SECRET_KEY')
     OPENAI_API_KEY     = os.getenv('OPENAI_API_KEY')
 

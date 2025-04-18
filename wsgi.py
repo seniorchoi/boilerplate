@@ -2,7 +2,7 @@
 import os
 from dotenv import load_dotenv
 
-# 1️⃣ Load .env so Flask-CLI sees LICENSE_KEY, FLASK_ENV, DATABASE_URL, etc.
+# 1️⃣ Load .env so Flask-CLI sees FLASK_ENV, DATABASE_URL, etc.
 project_root = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(project_root, '.env'))
 
