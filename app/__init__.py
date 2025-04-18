@@ -11,8 +11,7 @@ from .main.routes import main_bp
 from .auth.routes import auth_bp
 from .ai.routes import ai_bp
 from .payments.routes import payments_bp
-from .license import require_license
-require_license()
+
 
 def create_app():
     app = Flask(
