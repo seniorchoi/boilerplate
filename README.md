@@ -5,13 +5,25 @@ A boilerplate for an AI-powered email drafting app.
 ## Setup (2 Minutes)
 
 ### Linux/macOS
-1. Clone: `git clone <repo-url> && cd blitzship`
-2. Copy `env.example` to `.env` and add API keys.
+1. Clone: `git clone https://github.com/seniorchoi/boilerplate && cd boilerplate`
+2. Create `.env` file and add API keys.
+```bash
+FLASK_SECRET_KEY=your_random_string
+STRIPE_SECRET_KEY=sk_test_your_stripe_key
+OPENAI_API_KEY=sk-your_openai_key
+DATABASE_URL=postgresql://...
+```
 3. Run: `./setup.sh`
 
 ### Windows
-1. Clone: `git clone <repo-url> && cd blitzship`
-2. Copy `env.example` to `.env` and add API keys.
+1. Clone: `git clone <repo-url> && cd boilerplate`
+2. Create `.env` file and add API keys.
+```bash
+FLASK_SECRET_KEY=your_random_string
+STRIPE_SECRET_KEY=sk_test_your_stripe_key
+OPENAI_API_KEY=sk-your_openai_key
+DATABASE_URL=postgresql://...
+```
 3. Run: `setup.bat`
 
 Open: `http://localhost:5000`
