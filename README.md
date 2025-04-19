@@ -11,7 +11,6 @@ A boilerplate for an AI-powered email drafting app.
 FLASK_SECRET_KEY=your_random_string
 STRIPE_SECRET_KEY=sk_test_your_stripe_key
 OPENAI_API_KEY=sk-your_openai_key
-DATABASE_URL=postgresql://...
 ```
 3. Run: `./setup.sh`
 
@@ -22,7 +21,6 @@ DATABASE_URL=postgresql://...
 FLASK_SECRET_KEY=your_random_string
 STRIPE_SECRET_KEY=sk_test_your_stripe_key
 OPENAI_API_KEY=sk-your_openai_key
-DATABASE_URL=postgresql://...
 ```
 3. Run: `setup.bat`
 
